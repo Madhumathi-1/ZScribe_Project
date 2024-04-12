@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ZScribe</title>
+<link rel="stylesheet"
+	href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+	rel="stylesheet" />
+<style>
+.gradient {
+	background-color: rgb(252, 237, 224);
+}
+
+@font-face {
+	font-family: puvi-bold;
+	src: url(Zoho\ Puvi\ Bold.ttf)
+}
+
+@font-face {
+	font-family: puvi-reg;
+	src: url(Zoho\ Puvi\ Regular.ttf);
+}
+
+* {
+	font-family: puvi-reg;
+	scroll-behavior: smooth;
+}
+
+.relative svg {
+	margin-top: 55px;
+}
+
+li {
+	list-style-type: none;
+}
+
+#search {
+	padding: 5px;
+	font-size: 17px;
+	border: 2px solid grey;
+	border-radius: 9px;
+}
+
+.background {
+	background-color: gray;
+	opacity: 0.7;
+	background-size: cover;
+}
+
+.firstsection {
+	height: 100vh;
+}
+
+.box-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	max-width: 50%;
+	margin: auto;
+	height: 80%;
+}
+
+.text-big {
+	font-family: "Piazzolla", serif;
+	font-weight: bold;
+	font-size: 41px;
+	text-align: center;
+}
+
+.text-small {
+	font-family: "Sansita Swashed", cursive;
+	font-size: 18px;
+	text-align: center;
+}
+
+#service {
+	margin: 34px;
+	display: flex;
+	color: black;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+#service .box {
+	/*margin-right: 16.5%;*/
+	border-radius: 28px;
+	text-align: center;
+}
+
+.box h2 {
+	font-size: 25px;
+	font-weight: bolder;
+}
+
+#service .box img {
+	margin-top: 20px;
+	height: 150px;
+	margin: auto;
+	display: block;
+	border-radius: 50%;
+}
+
+#service .box p {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.btn {
+	padding: 8px 20px;
+	margin: 7px 0;
+	border: 2px solid white;
+	border-radius: 8px;
+	background: none;
+	color: white;
+	cursor: pointer;
+}
+
+.center {
+	text-align: center;
+}
+
+.text-footer {
+	text-align: center;
+	padding: 30px 0;
+	font-family: "Ubuntu", sans-serif;
+	display: flex;
+	justify-content: center;
+	color: black;
+	font-weight: 700;
+	font-size: 22px;
+}
+</style>
+</head>
+<body class="leading-normal tracking-normal text-white gradient">
+	<nav id="header" class="fixed w-full z-30 top-0 text-white">
+		<div
+			class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+			<div class="pl-4 flex items-center">
+				<a
+					class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+					href="#" style="color: black">ZScribe</a>
+			</div>
+			<div class="block lg:hidden pr-4">
+				<button id="nav-toggle"
+					class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <h2>Home</h2>
+				</button>
+			</div>
+			<div
+				class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+				id="nav-content">
+				<ul class="list-reset lg:flex justify-end flex-1 items-center">
+					<li class="mr-3"><a
+						class="inline-block py-2 px-4 text-black font-bold no-underline"
+						href="#home">Home</a></li>
+					<li class="mr-3"><a
+						class="inline-block text-black no-underline hover:text-gray-800 font-bold hover:text-underline py-2 px-4"
+						href="#about">About</a></li>
+					<li class="mr-3"><a
+						class="inline-block text-black font-bold no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+						href="#doc">Features and Documentation</a></li>
+
+				</ul>
+				<a href="#con">
+					<button id="navAction"
+						class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+						style="color: black">Contact</button>
+				</a>
+			</div>
+		</div>
+		<hr class="border-b border-gray-300 opacity-25 my-0 py-0" />
+	</nav>
+	<!--Hero-->
+	<div class="pt-24" style="padding-left: 60px" id="home">
+		<div
+			class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+			<!--Left Col-->
+<div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left" style="
+    margin-bottom: 120px;
+">
+				<h1 class="my-4 text-5xl font-bold leading-tight"
+					style="color: black; font-family: puvi-bold;">Write Once,
+					Share Everywhere With Ease.</h1>
+				<p class="leading-normal text-2xl mb-8"
+					style="text-align: justify; color: black">One-stop solution to
+					save and sync all your documents and blogs. Keep track of your
+					drafts easily and securely, so you can focus on what matters most:
+					creating content. Now, keep writing!</p>
+				<button
+					class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" style="
+    font-size: 20px;">
+					<a href="SignIn.html">Get Started </a>
+				</button>
+			</div>
+			<!--Right Col-->
+			<div class="w-full md:w-3/5 py-6 text-center"
+				style="padding-left: 10px;">
+
+
+				<img class="w-full z-50" src="illustration(2).png" style="padding-left: 60px;margin-bottom: 72px;">
+			</div>
+		</div>
+	</div>
+	<div class="relative -mt-12 lg:-mt-24">
+		<!-- For Wave designs -->
+	</div>
+	<section class="bg-white border-b py-8" id="about">
+		<div class="container max-w-5xl mx-auto m-8">
+			<h2
+				class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+				ABOUT US</h2>
+			<div class="w-full mb-4">
+				<div
+					class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+			</div>
+			<div class="flex flex-wrap">
+				<div class="w-5/6 sm:w-1/2 p-6">
+					<h3 class="text-2xl text-gray-800 leading-none mb-3"
+						style="font-family: puvi-reg; line-height: 40px; padding-top: 30px">
+						Welcome to ZScribe, the ultimate writing app for bloggers and
+						writers. We understand the challenges of writing and how important
+						it is to have a seamless and efficient writing experience. That's
+						why we created ZScribe - to make writing better, faster, and
+						easier for you.</h3>
+					
+				</div>
+				<div class="w-full sm:w-1/2 p-6">
+					<img
+						src="https://cdn.dribbble.com/users/1040983/screenshots/10151242/media/c0b037d5841d53c15426d4dfbae3d502.png?compress=1&resize=1600x1200&vertical=top">
+				</div>
+			</div>
+			<div class="flex flex-wrap flex-col-reverse sm:flex-row">
+				<div class="w-full sm:w-1/2 p-6 mt-6">
+					<img
+						src="https://cdn.dribbble.com/users/1040983/screenshots/9780920/media/e3efdc3d5d9bd634fccaf080c2ee3c1c.png?compress=1&resize=1600x1200&vertical=top">
+				</div>
+				<div class="w-full sm:w-1/2 p-6 mt-6">
+					<div class="align-middle">
+						<h3 class="text-2xl text-gray-800 leading-none mb-3"
+							style="font-family: puvi-reg; line-height: 40px; padding-top: 30px">
+							Our app is made to make writing simple and flexible for you. You
+							can now publish your writings simultaneously on Blogger and Zoho
+							Writer with only one click thanks to ZScribe. This signifies that
+							you can easily share your work and reach a larger audience.</h3>
+						
+											</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-gray-100 py-8" id="doc">
+		<div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+			<h2
+				class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+				Features and Documentation</h2>
+			<div class="w-full mb-4">
+				<div
+					class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+			</div>
+			<div
+				class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
+				<div
+					class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
+					<div
+						class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+						<div class="w-full p-8 text-3xl font-bold text-center">Features</div>
+						<div class="h-1 w-full gradient my-0 py-0 rounded-t text-center"></div>
+						<ul>
+						<li class="border-b py-4 text-center">User Friendly</li>
+						<li class="border-b py-4 text-center">Customizable TextArea</li>
+						<li class="border-b py-4 text-center">Best Interface</li>
+						<li class="border-b py-4 text-center">Double work in SinglePage</li>
+						</ul>
+					</div>
+					<div
+						class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+						<div class="flex items-center justify-center">
+							<button
+								class="mx-auto lg:mx-0 hover:underline gradient text-base font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+								<a href="Documentation.html">Documentation</a>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Change the colour #f8fafc to match the previous section colour -->
+	<section class="container mx-auto text-center py-6 mb-12" id="con">
+		<h2
+			class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+			Contact us for any further queries</h2>
+		<div class="w-full mb-4">
+			<div
+				class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+		</div>
+		<button
+			class="mx-auto lg:mx-0 hover:underline bg-white text-black font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+			Message Now</button>
+	</section>
+	<section class="service">
+		<div id="service">
+			<div class="box">
+				<!-- Form -->
+				<img src="moureesh.png" alt="color_image"> <br>
+
+				<!-- Displaying text at
+					the center of the box-->
+				<h2>Moureesh K</h2>
+				<p class="center">moureesh.k@zohocorp.com</p>
+
+			</div>
+			<div class="box">
+				<!-- Form -->
+				<img src="Prabu.png" alt="color_image"> <br>
+
+				<!-- Displaying text at
+					the center of the box-->
+				<h2>Shanmuga Prabu G</h2>
+				<p class="center">shanmugaprabu.g@zohocorp.com</p>
+
+			</div>
+			<div class="box">
+				<!-- Form -->
+				<img src="Subha.png" alt="color_image"> <br>
+
+				<!-- Displaying text at
+					the center of the box-->
+
+				<h2>Subhasri R</h2>
+				<p class="center">subhasri.raja@zohocorp.com</p>
+
+			</div>
+			<div class="box">
+				<!-- Form -->
+				<img src="madhumathi.png" alt="color_image"> <br>
+
+				<!-- Displaying text at
+					the center of the box-->
+				<h2>Madhumathi M</h2>
+				<p class="center">madhumathi.murthy@zohocorp.com</p>
+
+			</div>
+		</div>
+	</section>
+	<footer class="background">
+		<p class="text-footer">Copyright @-All rights are reserved</p>
+
+	</footer>
+	<!-- jQuery if you need it
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  -->
+	<script>
+		var scrollpos = window.scrollY;
+		var header = document.getElementById("header");
+		var navcontent = document.getElementById("nav-content");
+		var navaction = document.getElementById("navAction");
+		var brandname = document.getElementById("brandname");
+		var toToggle = document.querySelectorAll(".toggleColour");
+
+		document.addEventListener("scroll", function() {
+			/*Apply classes for slide in bar*/
+			scrollpos = window.scrollY;
+
+			if (scrollpos > 10) {
+				header.classList.add("bg-white");
+				navaction.classList.remove("bg-white");
+				navaction.classList.add("gradient");
+				navaction.classList.remove("text-gray-800");
+				navaction.classList.add("text-white");
+				//Use to switch toggleColour colours
+				for (var i = 0; i < toToggle.length; i++) {
+					toToggle[i].classList.add("text-gray-800");
+					toToggle[i].classList.remove("text-white");
+				}
+				header.classList.add("shadow");
+				navcontent.classList.remove("bg-gray-100");
+				navcontent.classList.add("bg-white");
+			} else {
+				header.classList.remove("bg-white");
+				navaction.classList.remove("gradient");
+				navaction.classList.add("bg-white");
+				navaction.classList.remove("text-white");
+				navaction.classList.add("text-gray-800");
+				//Use to switch toggleColour colours
+				for (var i = 0; i < toToggle.length; i++) {
+					toToggle[i].classList.add("text-white");
+					toToggle[i].classList.remove("text-gray-800");
+				}
+
+				header.classList.remove("shadow");
+				navcontent.classList.remove("bg-white");
+				navcontent.classList.add("bg-gray-100");
+			}
+		});
+	</script>
+	<script>
+		/*Toggle dropdown list*/
+		/*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+		var navMenuDiv = document.getElementById("nav-content");
+		var navMenu = document.getElementById("nav-toggle");
+
+		document.onclick = check;
+		function check(e) {
+			var target = (e && e.target) || (event && event.srcElement);
+
+			//Nav Menu
+			if (!checkParent(target, navMenuDiv)) {
+				// click NOT on the menu
+				if (checkParent(target, navMenu)) {
+					// click on the link
+					if (navMenuDiv.classList.contains("hidden")) {
+						navMenuDiv.classList.remove("hidden");
+					} else {
+						navMenuDiv.classList.add("hidden");
+					}
+				} else {
+					// click both outside link and outside menu, hide menu
+					navMenuDiv.classList.add("hidden");
+				}
+			}
+		}
+		function checkParent(t, elm) {
+			while (t.parentNode) {
+				if (t == elm) {
+					return true;
+				}
+				t = t.parentNode;
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>
